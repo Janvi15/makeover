@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 10, 2019 at 06:51 AM
+-- Generation Time: Apr 10, 2019 at 09:58 AM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.7
 
@@ -48,13 +48,16 @@ CREATE TABLE `appointment_detail` (
   `shop_id` varchar(255) NOT NULL DEFAULT '11',
   `customer_id` varchar(255) NOT NULL DEFAULT 'krupa567@yahoo.com',
   `date_time` datetime NOT NULL,
-  `Hair_cut` int(2) NOT NULL,
-  `Pedicure` int(11) NOT NULL,
-  `Facial_and_Clean_ups` int(11) NOT NULL,
-  `Waxing_normal` int(11) NOT NULL,
-  `Dettaning` int(11) NOT NULL,
+  `facilities` varchar(30000) NOT NULL,
   `amount` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `appointment_detail`
+--
+
+INSERT INTO `appointment_detail` (`appointment_id`, `shop_id`, `customer_id`, `date_time`, `facilities`, `amount`) VALUES
+(1, '11', 'krupa567@yahoo.com', '2019-04-10 13:15:52', 'Hair-cut,Facial & Clean Ups,Waxing Normal', '600');
 
 -- --------------------------------------------------------
 
@@ -153,7 +156,7 @@ ALTER TABLE `appointment_detail`
 -- AUTO_INCREMENT for table `appointment_detail`
 --
 ALTER TABLE `appointment_detail`
-  MODIFY `appointment_id` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `appointment_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

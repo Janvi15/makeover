@@ -82,7 +82,7 @@ include '../header.php';
             $amt1 = $row['Hair_cut'];
           }
         ?>
-        <input class="form-check-input" type="checkbox" id="ch1" name="chkb1" value="Hair-cut" onclick="display()">
+        <input class="form-check-input" type="checkbox" id="ch1" name="chkb[]" value="Hair-cut" onclick="display()">
         Hair&mdash;Cut............<?php echo $amt1; ?>
 
                 <span class="form-check-sign">
@@ -100,7 +100,7 @@ include '../header.php';
             $amt2 = $row['Pedicure'];
           }
         ?>
-        <input class="form-check-input" type="checkbox" id="ch2" name="chkb2" onclick="display()" value="Pedicure">
+        <input class="form-check-input" type="checkbox" id="ch2" name="chkb[]" onclick="display()" value="Pedicure">
        Pedicure............<?php echo $amt2; ?>
 
               <span class="form-check-sign">
@@ -118,7 +118,7 @@ include '../header.php';
             $amt3 = $row['Facial_and_Clean_ups'];
           }
         ?>
-        <input class="form-check-input" type="checkbox" id="ch3" name="chkb3" value="Facial & Clean Ups" onclick="display()">
+        <input class="form-check-input" type="checkbox" id="ch3" name="chkb[]" value="Facial & Clean Ups" onclick="display()">
     Facial & Clean&mdash;Ups............<?php echo $amt3; ?>
 
             <span class="form-check-sign">
@@ -138,7 +138,7 @@ include '../header.php';
           }
         ?>
 
-        <input class="form-check-input" type="checkbox" id="ch4" name="chkb4"  value="Waxing Normal" onclick="display()">
+        <input class="form-check-input" type="checkbox" id="ch4" name="chkb[]"  value="Waxing Normal" onclick="display()">
 
         Waxing Normal............<?php echo $amt4; ?>
 
@@ -158,7 +158,7 @@ include '../header.php';
             $amt5 = $row['Dettaning'];
           }
         ?>
-        <input class="form-check-input" type="checkbox" id="ch5" name="chkb5"  value="Dettaning" onclick="display()">
+        <input class="form-check-input" type="checkbox" id="ch5" name="chkb[]"  value="Dettaning" onclick="display()">
         Dettaning............<?php echo $amt5; ?>
 
               <span class="form-check-sign">

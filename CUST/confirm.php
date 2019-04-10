@@ -39,8 +39,9 @@ include '../header.php';
                                     </div>
                                                     
                                 <div class="col">
-                                        Facilities :  
-                                       <input type="text" name="facilities" disabled value=" <?php  echo $_COOKIE['facilities']; ?>">
+                                        Facilities : 
+                                       
+                                       <input type="text" size="50" name="facilities" disabled value=" <?php  echo $_COOKIE['facilities']; ?>">
                                 </div>
 
                                 <div class="col">
@@ -51,9 +52,9 @@ include '../header.php';
  
                                 <div class="row">
                                     <div class="col">
-                                    	<a href="confirmProcess.php">
+                                    	<a href="addFacility.php">
                                     	<button class="btn btn-primary" name="confirm" style="width:200px">
-                                    <i class="fa fa-check"></i>&nbsp;Confirm
+                                    <i class="fa fa-check" onclick="add()"></i>&nbsp;Confirm
                                         </button>
                                         </a>
 
@@ -71,10 +72,10 @@ include '../header.php';
 
 </body>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	
 	function add() {
-		location.href = "index.php";
+		location.href = "addFacility.php";
 	}
-</script>
+</script> -->
 </html>
