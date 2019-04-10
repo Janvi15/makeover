@@ -1,0 +1,48 @@
+<?php
+	include 'Connection.php';
+
+	if (isset($_POST['btnSignup'])) {
+	 	$Fname = $_POST['SFname'];
+	 	$Lname = $_POST['SLname'];
+		$Email = $_POST['SEmail'];
+		$PNo = $_POST['SPNo'];
+	 	$ShopName = $_POST['shop_name'];
+	 	$City = $_POST['shop_city'];
+	 	$Street = $_POST['shop_street'];
+	 	$State = $_POST['shop_state'];
+
+	 	$sql = "INSERT INTO customer_detail (`C_Email`, `C_Fname`, `C_Lname`, `C_Password`, `C_PhoneNo`) VALUES ('$Email', '$Fname', '$Lname', '$psw', '$PNo')";
+
+	 	$result = $conn->query($sql);
+
+	 	if ($result === TRUE) {
+	 		echo "Successfully inserted";
+	 		header("Location:home.php");
+
+	 	}else{
+	 		echo "ERROR!!!";
+	 	}
+
+	 }elseif (isset($_POST['SignIn'])) {
+	 	
+	 	$email = $_POST['LEmail'];
+	 	$psw = $_POST['LPsw'];
+
+	 	$sql = "SELECT * FROM customer_detail WHERE C_Email = '$email' AND C_Password = '$psw' ";
+	 	$result = $conn->query($sql);
+
+	 	if ($result->num_rows > 0) {
+	 		echo "Successfully Logged in";
+	 		header("Location:home.php");
+	 	}else{
+	 		echo "Not Logged in";
+	 	}
+	 }else{
+	 	echo "You are on wrong page";
+	 }
+
+	 //For SignIn
+
+	 
+
+?>
